@@ -9,7 +9,7 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
-    "next-dev": "next dev",
+    "next-dev": "next dev -H 0.0.0.0",
     "next-build": "next build",
     "next-start": "next start"
   },
