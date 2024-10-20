@@ -1,23 +1,18 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
+"use client"
+
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
-};
+import {useTranslation} from "next-i18next";
 
 const Blog = () => {
+  const { t } = useTranslation('common')
   return (
     <>
       <Breadcrumb
-        pageName="俞你同行"
-        description="俞敏洪都在读些什么书——老俞首档读书音频节目"
+        pageName={t('product-9')}
+        description={t('product-10')}
       />
 
       <section className="pb-[120px] pt-[120px]">
@@ -29,14 +24,14 @@ const Blog = () => {
                 <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
                   <h3>
                     <Link
-                      href="#"
+                      href="/classes/21"
                       className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
                     >
-                      俞你共读
+                      {t('product-11')}
                     </Link>
                   </h3>
                   <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-                    「 俞」 你共读， 邀你共行
+                    {t('product-12')}
                   </p>
                 </div>
               </div>
@@ -47,14 +42,14 @@ const Blog = () => {
                 <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
                   <h3>
                     <Link
-                      href="#"
+                      href="/classes/22"
                       className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
                     >
-                      俞老师有声书
+                      {t('product-13')}
                     </Link>
                   </h3>
                   <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-                    行走的人生
+                    {t('product-14')}
                   </p>
                 </div>
               </div>
@@ -65,14 +60,14 @@ const Blog = () => {
                 <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
                   <h3>
                     <Link
-                      href="#"
+                      href="/classes/23"
                       className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
                     >
-                      老俞百日英语晨练
+                      {t('product-15')}
                     </Link>
                   </h3>
                   <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-                    每天多一点人生感悟，每天学一句优雅表达
+                    {t('product-16')}
                   </p>
                 </div>
               </div>

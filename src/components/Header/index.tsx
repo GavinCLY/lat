@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next'
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import i18n from "i18next";
 
 const Header = () => {
   const { t } = useTranslation('common')
@@ -39,7 +40,6 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
-
   return (
     <>
       <header
@@ -134,10 +134,12 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <p>{t('lang')}</p>
-                <div>
-                  <ThemeToggler />
-                </div>
+                <p className="cursor-pointer" onClick={() => {
+                  i18n.changeLanguage(i18n.language === 'cn' ? 'en' : 'cn');
+                }}>{t('lang')}</p>
+                {/*<div>*/}
+                {/*  <ThemeToggler />*/}
+                {/*</div>*/}
               </div>
             </div>
           </div>

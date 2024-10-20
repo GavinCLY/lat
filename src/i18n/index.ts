@@ -5,7 +5,7 @@ import commonCn from './locales/cn/common.json'
 
 i18n.use(initReactI18next) // passes i18n down to react-i18next
   .init({
-    lng: 'cn',
+    lng: 'en',
     resources: {
       en: {
         common: commonEn
@@ -14,7 +14,7 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
         common: commonCn
       }
     },
-    fallbackLng: 'cn',
+    fallbackLng: 'en',
 
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape

@@ -1,23 +1,17 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+"use client";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Image from "next/image";
+import {useTranslation} from "next-i18next";
 
-export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
-};
 
 const AboutPage = () => {
+  const { t } = useTranslation('common')
   return (
     <>
       <Breadcrumb
-        pageName="投资行业"
-        description="关注行业动态，为投资者提供市场分析和投资机会，促进投资人与创业者之间的合作，实现双赢。"
+        pageName={t('investment-7')}
+        description={t('investment-8')}
       />
       <section id="about" className="pt-16 md:pt-20 lg:pt-28">
         <div className="container">
@@ -26,7 +20,7 @@ const AboutPage = () => {
               <div className="w-full px-4 lg:w-1/2">
                 <SectionTitle
                   title="Titan tech"
-                  paragraph="新加坡线下培训机构 （AI）"
+                  paragraph={t('investment-9')}
                   mb="44px"
                 />
               </div>
@@ -76,7 +70,7 @@ const AboutPage = () => {
               <div className="max-w-[470px]">
                 <SectionTitle
                   title="Vsparrk"
-                  paragraph="新加坡线下培训机构（数学思维）"
+                  paragraph={t('investment-10')}
                   mb="44px"
                 />
               </div>

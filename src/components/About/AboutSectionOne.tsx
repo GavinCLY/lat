@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import {useTranslation} from "next-i18next";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,6 +10,7 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const { t } = useTranslation('common')
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -24,8 +27,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="节目制作"
-                paragraph="专业团队制作富有创意和影响力的内容，包括纪录片和访谈节目，以传递知识并激发观众思考。"
+                title={t("product-1")}
+                paragraph={t("product-2")}
                 mb="44px"
               />
 
@@ -35,15 +38,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="创意" />
-                    <List text="专业" />
-                    <List text="视觉" />
+                    <List text={t("product-3")} />
+                    <List text={t("product-4")} />
+                    <List text={t("product-5")} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="故事性" />
-                    <List text="影响力" />
-                    <List text="高质量" />
+                    <List text={t("product-6")} />
+                    <List text={t("product-7")} />
+                    <List text={t("product-8")} />
                   </div>
                 </div>
               </div>

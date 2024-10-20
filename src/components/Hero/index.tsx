@@ -1,6 +1,9 @@
-import Link from "next/link";
+"use client";
+
+import {useTranslation} from "next-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation('common')
   return (
     <>
       <section
@@ -12,10 +15,10 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  连接知识与投资，推动个人与行业的持续发展！
+                  {t('home-1')}
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  我们是一家专注于知识付费、节目制作和行业投资的创新企业，旨在通过优质内容和专业服务，帮助用户在职业和个人发展中取得成功
+                  {t('home-2')}
                 </p>
               </div>
             </div>
